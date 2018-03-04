@@ -1,11 +1,12 @@
 
 # coding: utf-8
-print (1)
+
 # In[1]:
 #Test
 def Stock_Data(ticker, start_date, end_date, source = 'google'):
 
-    import pandas.io.data as web
+    import pandas_datareader.data as web
+    #import pandas.io.data as web
     import datetime
     import pandas as pd
     import numpy as np
@@ -143,7 +144,7 @@ for row in Profit_By_Stock:
 Profit_By_Stock.append(('Total',summ,avg_purch))
 import numpy as np
 Profit_By_Stock = np.array(Profit_By_Stock)
-print Profit_By_Stock
+print (Profit_By_Stock)
 
 
 # In[ ]:
