@@ -1,6 +1,6 @@
 
 # coding: utf-8
-
+print (1)
 # In[1]:
 #Test
 def Stock_Data(ticker, start_date, end_date, source = 'google'):
