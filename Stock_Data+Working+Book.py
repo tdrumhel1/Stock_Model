@@ -149,7 +149,7 @@ print Profit_By_Stock
 # In[ ]:
 
 def Taxes_and_Fees(transactions):
-    
+
     for key in transactions:
         if transactions[key][1] == 'Buy':
             Buy_Total += transactions[key][0]*100
@@ -158,4 +158,3 @@ def Taxes_and_Fees(transactions):
             Sell_Total += transactions[key][0]*100
             Sell_Count += 1
     max_tran_date = max(transactions.keys())
-
