@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[1]:
-#Test
+
 def Stock_Data(ticker, start_date, end_date, source = 'google'):
 
     import pandas_datareader.data as web
@@ -120,28 +120,3 @@ def Stock_Plot(f, transactions):
     plt.show()
 
     return None
-
-
-# In[3]:
-
-ticker_list = ['VRX','AAPL', 'GOOG','VRX', 'COF','BAC', 'MO', 'D', 'DIS', 'RGR']
-Start_Date = '2006-01-01'
-End_Date = '2016-08-01'
-Profit_By_Stock = []
-
-for ticker in ticker_list:
-    f = Stock_Data(ticker, Start_Date, End_Date)
-    Profit, Avg_Purch, Buy_Count, Sell_Count, transactions = Rolling_Average_Intersection(f)
-    Profit_By_Stock.append((ticker,Profit,Avg_Purch))
-
-summ = 0
-avg_purch = 0
-
-for row in Profit_By_Stock:
-    summ += row[1]
-    avg_purch += row[2]
-
-Profit_By_Stock.append(('Total',summ,avg_purch))
-import numpy as np
-Profit_By_Stock = np.array(Profit_By_Stock)
-print (Profit_By_Stock)
