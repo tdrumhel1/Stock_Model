@@ -1,0 +1,12 @@
+# In[ ]:
+
+def Taxes_and_Fees(transactions):
+
+    for key in transactions:
+        if transactions[key][1] == 'Buy':
+            Buy_Total += transactions[key][0]*100
+            Buy_Count += 1
+        elif transactions[key][1] == 'Sell':
+            Sell_Total += transactions[key][0]*100
+            Sell_Count += 1
+    max_tran_date = max(transactions.keys())
