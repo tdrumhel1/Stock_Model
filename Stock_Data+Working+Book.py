@@ -145,17 +145,3 @@ Profit_By_Stock.append(('Total',summ,avg_purch))
 import numpy as np
 Profit_By_Stock = np.array(Profit_By_Stock)
 print (Profit_By_Stock)
-
-
-# In[ ]:
-
-def Taxes_and_Fees(transactions):
-
-    for key in transactions:
-        if transactions[key][1] == 'Buy':
-            Buy_Total += transactions[key][0]*100
-            Buy_Count += 1
-        elif transactions[key][1] == 'Sell':
-            Sell_Total += transactions[key][0]*100
-            Sell_Count += 1
-    max_tran_date = max(transactions.keys())
